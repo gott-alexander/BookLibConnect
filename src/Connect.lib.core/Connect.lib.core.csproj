@@ -22,7 +22,7 @@
   <ItemGroup>
     <PackageReference Include="AAXClean" Version="0.4.9" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.43" />
-    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.12" />
   </ItemGroup>
 
   <ItemGroup>
