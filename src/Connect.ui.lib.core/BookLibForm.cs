@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -12,6 +12,7 @@ using core.audiamus.connect.ex;
 using R = core.audiamus.connect.ui.Properties.Resources;
 using static core.audiamus.aux.Logging;
 using core.audiamus.aux.win;
+using System.ComponentModel;
 
 namespace core.audiamus.connect.ui {
   public partial class BookLibForm : Form {
@@ -42,7 +43,8 @@ namespace core.audiamus.connect.ui {
 
     public event BookSelectionChangedEventHandler BookDownloadSelectionChanged;
     public event ConversionUpdatedEventHandler ConversionUpdated;
-
+        
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public bool DownloadSelectEnabled {
       get => bookLibdgvControl1.DownloadSelectEnabled;
       set => bookLibdgvControl1.DownloadSelectEnabled = value;
