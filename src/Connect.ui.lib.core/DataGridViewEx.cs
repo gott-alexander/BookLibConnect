@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using core.audiamus.aux;
 using core.audiamus.aux.win;
+using System.ComponentModel;
 
 namespace core.audiamus.connect.ui {
   class DataGridViewEx : DataGridView, ISortingEvents {
@@ -19,7 +20,8 @@ namespace core.audiamus.connect.ui {
     public event EventHandler BeginSorting;
     public event EventHandler EndSorting;
     public event EventHandler SortingCompleteToSetVerticalPosition;
-
+        
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public new ISortableBindingList DataSource {
       get => base.DataSource as ISortableBindingList;
       set {
@@ -28,7 +30,8 @@ namespace core.audiamus.connect.ui {
         value.EndSorting += dataSource_EndSorting;
       }
     }
-
+        
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public bool ClientAreaEnabled {
       get => _clientAreaEnabled;
       set {
